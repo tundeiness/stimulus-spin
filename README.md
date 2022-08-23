@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+## Commands used in this project
+rails g stimulus clipboard
