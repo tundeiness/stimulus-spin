@@ -10,10 +10,19 @@ export default class extends Controller {
     console.log("Hello, Stimulus!", this.element)
   }
 
+
+   get name() {
+    return this.argumentTarget.value
+  }
+
   greet() {
     // console.log("Hello, Stimulus!", this.element)
-    const element = this.argumentTarget
-    const name = element.value
-    console.log(`Hello, ${name}!`)
+    console.log(`Hello, ${this.name}!`)
+    // const element = this.argumentTarget
+    // const name = element.value
+    // console.log(`Hello, ${name}!`)
   }
+
+
+ 
 }
