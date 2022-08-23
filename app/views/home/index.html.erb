@@ -7,10 +7,10 @@
 <br/>
 <hr/>
 <br/>
-<div data-controller='clipboard'>
+<div data-controller='clipboard' data-clipboard-supported-class='clipboard--supported'>
   PIN: <input data-clipboard-target='origin' type='text' value='1234' readonly>
   <%# click is omitted from below in data-action because with or without click it is the default event %>
-  <button data-action='clipboard#copy'>Copy to Clipboard</button>
+  <button data-action='clipboard#copy' class='clipboard-button'>Copy to Clipboard</button>
 </div>
 
 
