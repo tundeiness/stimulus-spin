@@ -12,7 +12,9 @@ export default class extends Controller {
 
   load() {
     fetch(this.urlValue)
-    .then(res => res.text())
-    .then(html => this.element.innerHTML = html)
+      .then((response) => response.json())
+      // .then((json) => console.log(json));
+    // .then(res => res.text())
+    .then(html => this.element.innerHTML = html.title)
   }
 }
