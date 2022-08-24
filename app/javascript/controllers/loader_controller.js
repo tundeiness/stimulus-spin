@@ -15,9 +15,15 @@ export default class extends Controller {
   }
 
   commenceRefresh(){
-    setInterval(() => {
+    this.refreshTimer = setInterval(() => {
       this.load()
     }, this.refreshIntervalValue)
+  }
+
+  haltRefresh(){
+    if(this.refreshTimer) {
+      clearInterval(this.refreshTimer)
+    }
   }
 
   load() {
