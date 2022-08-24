@@ -26,6 +26,10 @@ export default class extends Controller {
     }
   }
 
+  disconnect(){
+    this.haltRefresh();
+  }
+
   load() {
     fetch(this.urlValue)
       .then((response) => response.json())
