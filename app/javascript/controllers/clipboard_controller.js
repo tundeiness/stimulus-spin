@@ -9,7 +9,7 @@ export default class extends Controller {
   // this.hasOriginTarget evaluates to true if there is a origin target or false if not.
 
   // add data-clipboard-supported-class
-   static classes = ['supported']
+  static classes = ['supported']
   //  this will control the specific CSS class in the HTML
   // the above class can be accessed via this.supportedClass
 
@@ -18,6 +18,7 @@ export default class extends Controller {
   connect() {
     // check if  clipboardAPI is supported
     if('clipboard' in navigator){
+      console.log(this.element.classList)
       this.element.classList.add(this.supportedClass);
     }
   }
