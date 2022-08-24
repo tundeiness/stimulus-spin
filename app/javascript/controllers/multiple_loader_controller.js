@@ -9,6 +9,6 @@ export default class extends Controller {
   load({params}){
       fetch(params.url)
         .then((response) => response.json())
-        .then((html) => (this.element.innerHTML = html.title));
+        .then((html) => (this.element.innerHTML = html.body));
   }
 }
